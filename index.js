@@ -41,14 +41,17 @@ if (!fs.existsSync(imageDir)) {
 }
 
 app.get('/', function(req, res){
-	Artist.find(function (err, artists) {
-		if (err) return console.error(err);
+	var query = Artist.find()
+	.sort('-name')
+	.select('name city imageFile');
+	query.exec(function (err, artists) {
+		if (err) return handleError(err);
 		res.json(artists);
 	});
 });
 
 app.get('/image/:imagename', function(req, res){
-	var filePath = imageDir + '/' + req.params.imagename + '.jpg';
+	var filePath = imageDir + '/' + req.params.imagename;
 	graceFs.readFile(filePath, function (err, data) {
 		if (err) throw err;
 		res.setHeader('Content-Type', 'image/jpeg');
