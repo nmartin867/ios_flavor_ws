@@ -1,0 +1,22 @@
+{
+  "name": "ios_flavor_ws",
+  "version": "1.0.0",
+  "description": "WS to serve TreeFort artist information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nmartin867/ios_flavor_ws.git"
+  },
+  "keywords": [
+    "TreeFort"
+  ],
+  "author": "Nick Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmartin867/ios_flavor_ws/issues"
+  },
+  "homepage": "https://github.com/nmartin867/ios_flavor_ws"
+}
